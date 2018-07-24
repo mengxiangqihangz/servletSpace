@@ -63,7 +63,7 @@ public class Connector extends LifecycleMBeanBase  {
     }
 
     public Connector(String protocol) {
-        setProtocol(protocol);
+        setProtocol(protocol);	//先 设置protocolHandlerClassName的值为protocol ，然后再用protocolHandlerClassName进行反射，得到当前protocolHandler
         // Instantiate protocol handler
         try {
             Class<?> clazz = Class.forName(protocolHandlerClassName);

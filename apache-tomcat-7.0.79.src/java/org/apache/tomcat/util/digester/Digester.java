@@ -1257,7 +1257,7 @@ public class Digester extends DefaultHandler2 {
 		}
 
 		// Parse system properties
-		list = updateAttributes(list);
+		list = updateAttributes(list);// 属性支持EL表达式，所以需要通过此方法进行解析
 
 		// Save the body text accumulated for our surrounding element
 		bodyTexts.push(bodyText);
@@ -1303,6 +1303,9 @@ public class Digester extends DefaultHandler2 {
 //			System.out.println(list);
 //		}
 		
+		/*
+		 *	SetNextRule  啥也没做，跑的Rule的方法 
+		 */
 		if ((rules != null) && (rules.size() > 0)) {
 			for (int i = 0; i < rules.size(); i++) {
 				try {

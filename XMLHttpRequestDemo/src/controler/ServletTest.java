@@ -17,7 +17,7 @@ import model.UserInfo;
 import serveice.ILoginService;
 import serveice.serviceimp.LoginServiceImp;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+//import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 public class ServletTest extends HttpServlet {
 	

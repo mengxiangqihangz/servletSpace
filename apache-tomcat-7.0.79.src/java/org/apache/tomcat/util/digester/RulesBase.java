@@ -268,7 +268,7 @@ public class RulesBase implements Rules {
      *  select matching rules regardless of namespace URI
      * @param pattern Pattern to be matched
      */
-    protected List<Rule> lookup(String namespaceURI, String pattern) {
+    protected List<Rule> lookup(String namespaceURI, String pattern) {//pattern 是从cache中取出其中的rule ，namespaceURI 在选择 命名空间下的rules
 
         // Optimize when no namespace URI is specified
         List<Rule> list = this.cache.get(pattern);
